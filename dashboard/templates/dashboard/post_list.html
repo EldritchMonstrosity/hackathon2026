@@ -1,3 +1,5 @@
+<a href="{% url 'dashboard:dashboard' %}">Back to Dashboard</a>
+
 {% for post in posts %}
     <div>
         <a href="{% url 'dashboard:post_individual' post.id %}">

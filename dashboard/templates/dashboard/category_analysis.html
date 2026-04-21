@@ -2,6 +2,8 @@
 
 <h1>{{ category }} analysis</h1>
 
+<a href="{% url 'dashboard:dashboard' %}">Back to Dashboard</a>
+
 <h2>Liked Posts contributing to this</h2>
 
 {% for post in liked_posts %}
@@ -19,3 +21,4 @@
         <p>{{ post.post_caption }}</p>
     </div>
 {% endfor %}
+
