@@ -69,7 +69,8 @@ def build_dashboard_data(request):
         for k in final_eval:
             final_eval[k] /= (len(liked_posts)+len(disliked_posts))
 
-    average()
+    if (len(liked_posts)+len(disliked_posts)!=0):
+        average()
 
     return {
         "final_eval": final_eval,
