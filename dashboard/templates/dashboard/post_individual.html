@@ -1,0 +1,8 @@
+<h1>{{ post.caption }}</h1>
+
+<img src="{{ post.post_image.url }}" width="400">
+
+<a href="{% url 'dashboard:like_post' post.id %}">👍 Like</a>
+<a href="{% url 'dashboard:dislike_post' post.id %}">👎 Dislike</a>
+
+<p>ID: {{ post.id }}</p>

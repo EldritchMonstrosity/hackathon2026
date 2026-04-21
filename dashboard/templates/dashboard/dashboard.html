@@ -1,0 +1,19 @@
+<h1>Dashboard</h1>
+<a href="{% url 'dashboard:post_list' %}">Posts</a>
+
+{% for category, value in final_eval.items %}
+
+    <div style="margin-bottom: 20px;">
+        <a href="{% url 'dashboard:category_analysis' category %}"> {{ category }}: {{ value }}</a>
+
+        {% if category == "politics" %}
+            <input type="range" min="-1" max="1" step="0.01" value="{{ value }}" disabled>
+        {% else %}
+            <input type="range" min="0" max="1" step="0.01" value="{{ value }}" disabled>
+        {% endif %}
+    </div>
+
+{% endfor %}
+
+
+
