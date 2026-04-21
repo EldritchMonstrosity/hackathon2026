@@ -9,7 +9,7 @@ class Command(BaseCommand):
     help = "Import posts from post_data folder"
 
     def handle(self, *args, **kwargs):
-        base_path = Path(settings.BASE_DIR).parent / "hackathon2026/post_data"
+        base_path = os.path.join(settings.BASE_DIR, "post_data")
 
         for folder_name in os.listdir(base_path):
             folder_path = os.path.join(base_path, folder_name)
